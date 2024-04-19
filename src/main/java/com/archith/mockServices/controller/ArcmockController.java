@@ -41,7 +41,7 @@ public class ArcmockController {
 	
 	@GetMapping(value = "/mockstatus")
 	public static  String showserverStatus() {
-		return "ARC-MOCK Server started up and running..";
+		return "ARCENDOW Server started up and running..";
 	}
 	
 	@GetMapping(value = {"/home","port",})

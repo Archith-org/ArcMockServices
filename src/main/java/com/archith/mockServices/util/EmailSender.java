@@ -51,8 +51,8 @@ public class EmailSender {
             
 
             // Set the email subject and content
-            message.setSubject("Profile registration verification");
-            message.setText("Hello " + name+", " + "Your OTP for ArcMock Test profile registration is: " + otp);
+            message.setSubject("Profile registration OTP");
+            message.setText("Hello " + name+", " + "Your OTP for Arcendow profile registration is: " + otp);
             // Send the message
             System.out.println("Email Message: " + message.toString());
             Transport.send(message);

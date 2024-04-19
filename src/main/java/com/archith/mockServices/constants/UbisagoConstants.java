@@ -6,7 +6,7 @@ public class UbisagoConstants {
 	
 	public static final String EMAIL_APP_PASSKEY = "rwzrxevihuwesuhl";
 	
-	public static final String EMAIL_REF_NAME = "Ubisago Arcmock";
+	public static final String EMAIL_REF_NAME = "Arcendow";
 	
 	public static final String EMAIL_HOST = "smtp.gmail.com";
 	

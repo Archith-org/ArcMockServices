@@ -54,13 +54,22 @@ public class UserServiceImpl implements UserService {
         Random random = new Random();
         StringBuilder otp = new StringBuilder(otpLength);
         
+        int atIndex = email.indexOf('@');
+        String username = "";
+        
+        if (atIndex != -1) { // Check if "@" symbol exists in the email
+            // Extract substring before the "@" symbol
+        	username = email.substring(0, atIndex);
+            System.out.println("Username: " + username);
+        }
+        
         for (int i = 0; i < otpLength; i++) {
             otp.append(numbers.charAt(random.nextInt(numbers.length())));
         }
         String generatedOTP = otp.toString();
         inMemoryOtpMap.put(email, generatedOTP);
         System.out.println("Generated OTP: " + generatedOTP);
-        emailSender.sendOtpViaEmail(email, generatedOTP,name);
+        emailSender.sendOtpViaEmail(email, generatedOTP,username);
 		return generatedOTP;
 	}
 	
